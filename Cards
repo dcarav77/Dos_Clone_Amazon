@@ -1,12 +1,14 @@
-import React from 'react'
-import { AmazonContext } from '../Context/AmazonContext'
+import React, { useState, useContext, useEffect } from 'react'
 import _card from '/Users/dcarav77/dos_clone_amazon/pages/_card.js'
+import { AmazonContext } from '/Users/dcarav77/dos_clone_amazon/Context/AmazonContext.js'
 
 const Cards = () => {
-     const item = {
+     
+    
+    const item = {
          id: 0,
          attributes: {
-             name: "Puss",
+             name: "Suss",
              price: 2,
              src: "https://media0.giphy.com/media/HaiNo8bOyRbkvG1CWy/giphy.gif?cid=790b76111e6a8cbef4aa699c9933f1a2877650930935e85f&rid=giphy.gif&ct=g"
          }
@@ -20,8 +22,8 @@ const Cards = () => {
     
     return (
         <div className= {styles.container}>
-            <div classname={styles.title}>New Release</div>
-            <div classname={styles.cards}>
+            <div className={styles.title}>New Release</div>
+            <div className={styles.cards}>
                 <_card key= {item.id} item= 
                 {item.attributes}/>
             </div>
